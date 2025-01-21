@@ -20,7 +20,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
 - Added ccache support, may save up to 50%+ build time
 - Upgraded the toolchain and libc:
   - gcc 13.3.0
-  - musl 1.2.5 / uClibc-ng 1.0.50
+  - musl 1.2.5 / uClibc-ng 1.0.51
  - OpenWrt style package Makefile
  - Enabled kernel cgroups support
  - Fixed K2P led label names
@@ -65,6 +65,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
 - JCG-Y2
 - K2P
 - K2P-USB
+- KOMI-A8 (from https://github.com/vb1980/padavan-4.4, 没有机器测试，自行判断)
 - MI-4
 - MI-R3G
 - MI-R3P
@@ -84,12 +85,14 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
 - SIM-AX1800T (from https://github.com/vb1980/padavan-4.4, 没有机器测试，自行判断)
 - TX1801 Plus (from https://github.com/MNM28/padavan-4.4, 没有机器测试，自行判断)
 - WDR8620 (from https://github.com/fzn0268/padavan-4.4, 没有机器测试，自行判断)
+- WRL18M4GD (from https://github.com/vb1980/padavan-4.4, 没有机器测试，自行判断)
 - WE410443-TC (from https://github.com/akw28888/padavan-4.4, 没有机器测试，自行判断)
 - WIA3300-10 (from https://github.com/vb1980/padavan-4.4, 西加云杉WIA3300-10，自测可用)
 - WR1200JS
 - XY-C1
 - ZTE-E8820S
 - ZTE-E8820V2
+- ZTT-RX6000(from https://github.com/vb1980/padavan-4.4，中天科技RX6000的Wifi6运营商机器，ttl刷机简单，使用R3G分区，r3g breed刷入，自测可用)
 # Compilation steps
 
 - Install dependencies
@@ -98,7 +101,7 @@ This project is based on original rt-n56u with latest mtk 4.4.198 kernel, which 
   sudo apt install unzip libtool-bin ccache curl cmake gperf gawk flex bison nano xxd \
       fakeroot kmod cpio bc zip git python3-docutils gettext automake autopoint \
       texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \
-      libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
+      libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin liblzma-dev
   ```
   **Optional:**
   - install [golang](https://go.dev/doc/install) for building go programs
